@@ -1,0 +1,45 @@
+<div>
+    <h1>Account Management</h1>
+    <div class="tableBorder">
+        <h3>Current Users</h3>
+        <hr class="hrFormat">
+        <bs-table class="tableScroll" *ngIf="userListResult.users != null" [rows]="userListResult.users"
+                  [selectable]="selectable"
+                  [sortable]="true">
+            <bs-column header="Last Name" fieldName="_source.lastName"></bs-column>
+            <bs-column header="First Name" fieldName="_source.firstName"></bs-column>
+            <bs-column header="Email" fieldName="_source.email"></bs-column>
+            <bs-column header="Status" fieldName="_source.status"></bs-column>
+            <bs-column header="Role 1">
+                <template let-row>
+                    <material-checkbox [checked]="row.role1"></material-checkbox>
+                </template>
+            </bs-column>
+            <bs-column header="Role 2">
+                <template>
+                    <material-checkbox></material-checkbox>
+                </template>
+            </bs-column>
+            <bs-column header="Role 3">
+                <template>
+                    <material-checkbox></material-checkbox>
+                </template>
+            </bs-column>
+            <bs-column header="Role 4">
+                <template>
+                    <material-checkbox></material-checkbox>
+                </template>
+            </bs-column>
+            <bs-column header="Role 5">
+                <template>
+                    <material-checkbox></material-checkbox>
+                </template>
+            </bs-column>
+            <bs-column header="Role 6">
+                <template>
+                    <material-checkbox></material-checkbox>
+                </template>
+            </bs-column>
+        </bs-table>
+    </div>
+</div>
